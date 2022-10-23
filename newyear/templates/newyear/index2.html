@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Primera plantilla</title>
+    <link href="{% static 'newyear/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>
+    La plantilla dice hoy es el dia {{variable1}} del mes {{variable2}}
+    </h1>
+    {% if variable3 %}
+    <h1>SI, CLARO</h1>
+    {% else %}
+    <h1>NI DE COÑA</h1>
+    {% endif %}
+</body>
+</html>
