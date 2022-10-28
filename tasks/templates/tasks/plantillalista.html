@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Lista de actividades</title>
-    </head>
-    <body>
-        <ul>
+{% extends "tasks/comun.html" %}
+
+ {% block cuerpo %}
+ <h1>Esta es la lista de actividades</h1>
+               <ul>
             {% for task in lista %}
                 <li>{{ task }}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+            {% empty %}
+                <li>No has metido nada</li>
+            {% endfor %}   
+        <a href="{% url 'tasks:añadir' %}">Introduce un nuevo elemento</a>
+{% endblock %}
